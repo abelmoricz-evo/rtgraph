@@ -41,9 +41,9 @@ class Sensor(models.Model):
         ordering = ["name"]
 
 class Record(models.Model):
-    timestamp = models.JSONField()
-    data_value = models.JSONField()
-    tool_used = models.JSONField()
+    timestamp = models.IntegerField()
+    data_value = models.DecimalField(max_digits=5, decimal_places=2)
+    tool_used = models.CharField(max_length=200)
     sensor = models.ForeignKey(Sensor, models.SET_NULL, blank=True, null=True)
 
     @database_sync_to_async

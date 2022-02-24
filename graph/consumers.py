@@ -20,10 +20,13 @@ class GraphConsumer(AsyncWebsocketConsumer):
         ForceSensor = await Sensor.create('force-load', 'lbs', 50, NewUser)
         await ForceSensor.save_to_db()
 
-        for i in range(1000):
+        for i in range(100):
             data = counter.update()
             NewRecord = await Record.create(i*200, data, NewUser.tool_selected, ForceSensor)
             NewRecord.pk = None
             await NewRecord.save_to_db()
             await self.send(json.dumps({'value': data}))
             await sleep(.2)
+    
+    async def disconnect(self):
+        pass
