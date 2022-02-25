@@ -22,7 +22,7 @@ class GraphConsumer(AsyncWebsocketConsumer):
 
         for i in range(100):
             data = counter.update()
-            NewRecord = await Record.create(i*200, data, NewUser.tool_selected, ForceSensor)
+            NewRecord = await Record.create(i*200, data, NewUser.tool_selected, ForceSensor, NewUser)
             NewRecord.pk = None
             await NewRecord.save_to_db()
             await self.send(json.dumps({'value': data}))

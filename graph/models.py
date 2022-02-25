@@ -45,6 +45,7 @@ class Record(models.Model):
     data_value = models.DecimalField(max_digits=5, decimal_places=2)
     tool_used = models.CharField(max_length=200)
     sensor = models.ForeignKey(Sensor, models.SET_NULL, blank=True, null=True)
+    user = models.ForeignKey(User, models.SET_NULL, blank=True, null=True)
 
     @database_sync_to_async
     def save_to_db(self):
@@ -52,8 +53,8 @@ class Record(models.Model):
 
     @classmethod
     @sync_to_async
-    def create(cls, timestamp, data_value, tool_used, sensor):
-        record = cls(timestamp=timestamp, data_value=data_value, tool_used=tool_used, sensor=sensor)
+    def create(cls, timestamp, data_value, tool_used, sensor, user):
+        record = cls(timestamp=timestamp, data_value=data_value, tool_used=tool_used, sensor=sensor, user=user)
         return record
 
     class Meta:
