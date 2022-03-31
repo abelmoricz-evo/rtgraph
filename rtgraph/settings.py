@@ -86,6 +86,7 @@ DATABASES = {
     }
 }
 
+'''
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
@@ -93,6 +94,13 @@ CHANNEL_LAYERS = {
             'hosts': [os.environ.get('REDIS_URL', 'redis://localhost:6379')],
         }
     }
+}
+'''
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    },
 }
 
 CACHES = {

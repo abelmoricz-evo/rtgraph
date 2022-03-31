@@ -17,9 +17,11 @@
             <div class="col-10 mx-auto mt-5">
                 <canvas id="myChart" width="400" height="200"></canvas>
             </div>
+            <input class="btn btn-secondary brn-lg btn-block" id="control" type="button" value="Resume/Pause">
         </div>
     </div>
     <script>
+        var inMotion = true;
         const ctx = document.getElementById('myChart').getContext('2d');
         var graphData = {
             type: 'line',
@@ -29,9 +31,9 @@
                     label: '# of Votes',
                     data: [12, 19, 3, 5, 2, 3],
                     backgroundColor: [
-                        'rgba(73, 198, 230, 0.5)',
+                        'rgba(73, 198, 230, 1)',
                     ],
-                    borderWidth: 1
+                    borderWidth: 2
                 }]
             },
             options: {}
@@ -42,21 +44,41 @@
         console.log('Hello world from main')
 
         // var socket = new WebSocket('ws://localhost:8000/ws/graph/');
+        
         const socket = new WebSocket (
             'ws://' +
             window.location.host +
             '/ws/graph/'
         );
-
+        
+        document.querySelector('#control').onclick = function(e) {
+                if (inMotion)
+                {
+                    inMotion = 0;
+                }
+                else
+                {
+                    inMotion = 1;
+                }
+                
+                socket.send(JSON.stringify({
+                    'type':'control',
+                    'value': inMotion
+                }))
+            };
+        
         socket.onmessage = function(e) {
-            var djangoData = JSON.parse(e.data);
-            console.log(djangoData);
+            if (inMotion) {
+                var djangoData = JSON.parse(e.data);
+                console.log(djangoData);
 
-            var newGraphData = graphData.data.datasets[0].data;
-            newGraphData.shift();
-            newGraphData.push(djangoData.value)
-            graphData.data.datasets[0].data = newGraphData;
-            myChart.update();
+                var newGraphData = graphData.data.datasets[0].data;
+                newGraphData.shift();
+                newGraphData.push(djangoData.value2['sensor_data'])
+                graphData.data.datasets[0].data = newGraphData;
+                
+                myChart.update('none');
+            }
         }
     </script>
     <!--<script src="{% static 'main.js' %}"></script>-->
