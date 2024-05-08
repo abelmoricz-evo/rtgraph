@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-08T07:28:57.179Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" etag="9YqKkbBHef_DKDtFHsNQ" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-08T07:30:30.850Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" etag="GVi8JL3K2BITgKlOIDHm" version="24.3.1" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
     <mxGraphModel dx="3655" dy="2389" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -443,16 +443,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="mkR1BZJplaOjV8n7JHUe-247" value="reading environment state e.g. sensors" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-          <mxGeometry x="-240" y="260" width="210" height="40" as="geometry" />
+          <mxGeometry x="-230" y="-20" width="210" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mkR1BZJplaOjV8n7JHUe-248" value="controlling environment state e.g. pumps" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="-240" y="310" width="210" height="40" as="geometry" />
+          <mxGeometry x="-230" y="30" width="210" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mkR1BZJplaOjV8n7JHUe-249" value="industrial communication protocols" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="-240" y="360" width="210" height="40" as="geometry" />
+          <mxGeometry x="-230" y="80" width="210" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mkR1BZJplaOjV8n7JHUe-250" value="python libraries" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="-240" y="410" width="210" height="40" as="geometry" />
+          <mxGeometry x="-230" y="130" width="210" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mkR1BZJplaOjV8n7JHUe-279" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="mkR1BZJplaOjV8n7JHUe-199" target="mkR1BZJplaOjV8n7JHUe-290" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -470,7 +470,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="mkR1BZJplaOjV8n7JHUe-289" value="Storage technologies" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-240" y="460" width="210" height="40" as="geometry" />
+          <mxGeometry x="-230" y="180" width="210" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mkR1BZJplaOjV8n7JHUe-207" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="mkR1BZJplaOjV8n7JHUe-199" edge="1" target="rFRt4yUqS4FZcKzQcChp-3">
           <mxGeometry relative="1" as="geometry">
